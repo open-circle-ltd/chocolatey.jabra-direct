@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>jabra-direct</id>
+    <version>3.12.1955</version>
+    <title>Jabra Direct</title>
+    <authors>Jabra</authors>
+    <owners>ITIGO AG, sbaerlocher</owners>
+    <projectUrl>https://www.jabra.com/software-and-services/jabra-direct</projectUrl>
+    <iconUrl>https://rawgit.com/itigoag/chocolatey.jabra-direct/master/icon/jabra-direct.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[
+Jabra Direct is free PC software enabling Jabra USB devices to have Remote Call Control over most softphones. It also brings you features to personalize your Jabra device, to improve your device with firmware upgrades and offers a Dashboard with status to ensure everything is ready for the next call.
+
+## Package Parameters
+
+* `/CleanStartmenu` Removes frequently used Jabra Direct shortcuts from the Startmenu.
+]]></description>
+    <summary>Jabra Direct - Giving You Confidence in Every Call</summary>
+    <tags>Jabra Call</tags>
+    <packageSourceUrl>https://github.com</packageSourceUrl>
+    <docsUrl>https://www.jabra.com/-/media/Files/Software-and-Services/Jabra-Direct/Jabra-Direct-Datasheet_01_2018.pdf?la=en</docsUrl>
+    <releaseNotes>http://www.jabra.com/Support/release-notes/release-note-jabra-direct</releaseNotes>
+  </metadata>
+</package>
