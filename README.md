@@ -1,4 +1,4 @@
-# Chocolatey: Jabra Direct
+# Chocolatey Package: Jabra Direct
 
 ## Description
 
