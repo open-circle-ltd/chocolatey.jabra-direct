@@ -22,4 +22,8 @@ Jabra Direct is free PC software enabling Jabra USB devices to have Remote Call 
     <docsUrl>https://www.jabra.com/-/media/Files/Software-and-Services/Jabra-Direct/Jabra-Direct-Datasheet_01_2018.pdf?la=en</docsUrl>
     <releaseNotes>http://www.jabra.com/Support/release-notes/release-note-jabra-direct</releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="**" exclude="**\README.md;**\update.ps1" />
+  </files>
 </package>
