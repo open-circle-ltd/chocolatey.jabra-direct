@@ -26,7 +26,7 @@ function global:au_GetLatest {
 
     $urlVersion = $Matches[0].split(".")[0,1]
     $urlVersion = $urlVersion -join "."
-    $urlPackage = "https://www.jabra.com.de/jabradirect/JabraDirect$($urlVersion)Setup.exe"
+    $urlPackage = "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.exe"
 
     return  @{ 
         URL32          = $urlPackage;

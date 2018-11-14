@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>jabra-direct</id>
-    <version>3.12.1955</version>
+    <version>4.0.3541</version>
     <title>Jabra Direct</title>
     <authors>Jabra</authors>
     <owners>ITIGO AG, sbaerlocher</owners>
