@@ -1,11 +1,11 @@
-﻿# jabra-direct install
+# jabra-direct install
 
 $ErrorActionPreference = 'Stop';
 
 $toolsDir            = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $PackageParameters   = Get-PackageParameters
 $urlPackage          = 'https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.exe'
-$checksumPackage     = 'c296d54b6fbf6d7d6ff7f15202c52ff7891e633c15b71fa503313078538d15bc1ac363e2881cee8136814d2c65f74807b0efce41bb0453422ba372603008f15f'
+$checksumPackage     = '616b3a9eb6ccfc8b9b5e96bdfcada4d891c291b648cce05d9c3a34793e8a43491d1e6d8a7d19121f53127a0e47795b45d221cc0e4311c4d7cd94a6705f5a7c37'
 $checksumTypePackage = 'SHA512'
 
 Import-Module -Name "$($toolsDir)\helpers.ps1"
