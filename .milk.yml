@@ -1,0 +1,48 @@
+---
+# chocomilk vars
+
+# Package Changelog
+changelog: 'https://release-monitoring.org/api/v2/projects/?name=Jabra%20Direct'
+changelog_format: json
+# Regex for Version
+
+version: "{{ register_changelog.json |
+  json_query('items[*].version') |
+  join(', ')
+  }}"
+
+# Download URL
+url: 'https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.exe'
+# url64:
+
+searchreplace:
+  'tools/chocolateyinstall.ps1':
+    - regwxp: (^\s*[$]*urlPackage\s*=\s*)('.*')
+      replace: '$urlPackage = "{{ url }}"'
+    - regwxp: (^\s*[$]*checksumPackage\s*=\s*)('.*')
+      replace: '$checksumPackage = "{{ file_hash }}"'
+# readme to description
+readme:
+  start: 5
+  end: 12
+
+# deploy
+deploy:
+  - provider: chocolatey
+    repository: 'https://nuget.itigo.tech/upload'
+    key: "{{ lookup('env','CHOCOLATEY_ITIGO_API_KEY') }}"
+  - provider: chocolatey
+    repository: 'https://push.chocolatey.org/'
+    key: "{{ lookup('env','CHOCOLATEY_ORG_API_KEY') }}"
+  - provider: github
+    name: 'itigo-bot'
+    email: 'chocomilk@itigo.ch'
+    url: github.com/itigoag/chocolatey.jabra-direct.git
+    key: "{{ lookup('env','GITHUB_API_KEY') }}"
+
+# Notification
+notifications:
+  - provider: mattermost
+    url: 'https://matters.itigo.tech'
+    key: "{{ lookup('env','MATTERMOST_API_KEY') }}"
+    channel: 'software-packages'
