@@ -18,9 +18,10 @@ url: 'https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetu
 searchreplace:
   'tools/chocolateyinstall.ps1':
     - regwxp: (^\s*[$]*urlPackage\s*=\s*)('.*')
-      replace: '$urlPackage = "{{ url }}"'
+      replace: "$urlPackage = '{{ url }}'"
     - regwxp: (^\s*[$]*checksumPackage\s*=\s*)('.*')
-      replace: '$checksumPackage = "{{ file_hash }}"'
+      replace: "$checksumPackage = '{{ file_hash }}'"
+
 # readme to description
 readme:
   start: 5
