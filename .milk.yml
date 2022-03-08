@@ -34,14 +34,14 @@ deploy:
     repository: 'https://push.chocolatey.org/'
     key: "{{ lookup('env','CHOCOLATEY_ORG_API_KEY') }}"
   - provider: github
-    name: 'itigo-bot'
-    email: 'chocomilk@itigo.ch'
-    url: github.com/itigoag/chocolatey.jabra-direct.git
+    name: 'OpenCircle-Choco-Bot'
+    email: 'chocomilk@open-circle.ch'
+    url: github.com/open-circle-ltd/chocolatey.jabra-direct.git
     key: "{{ lookup('env','GITHUB_API_KEY') }}"
 
 # Notification
 notifications:
   - provider: mattermost
-    url: 'https://matters.itigo.tech'
+    url: 'https://chat.open-circle.ch'
     key: "{{ lookup('env','MATTERMOST_API_KEY') }}"
-    channel: 'software-packages'
+    channel: 'notification-chocolatey'
